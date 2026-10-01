@@ -1,7 +1,7 @@
 .products {
   padding: var(--section-padding);
   position: relative;
-  background: var(--bg-secondary);
+  background: transparent;
 }
 
 .products::before {
@@ -48,16 +48,29 @@
 }
 
 /* Product Card */
-.productCard {
+.productGlowCard {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.productCard,
+.productCardContent {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 48px;
   align-items: center;
   padding: 48px;
-  background: var(--bg-glass);
+  position: relative;
+  width: 100%;
+}
+
+.productCard {
+  background: rgba(18, 18, 35, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-xl);
-  position: relative;
   overflow: hidden;
   transition: all var(--transition-normal);
   max-width: 800px;
@@ -284,7 +297,8 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .productCard {
+  .productCard,
+  .productCardContent {
     grid-template-columns: 1fr;
     gap: 32px;
     padding: 32px 24px;

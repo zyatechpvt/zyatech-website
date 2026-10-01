@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar/Navbar";
 import Hero from "@/components/Hero/Hero";
+import StarBackground from "@/components/StarBackground/StarBackground";
 import About from "@/components/About/About";
 import Products from "@/components/Products/Products";
 import Founder from "@/components/Founder/Founder";
@@ -12,12 +13,15 @@ export default function HomePage() {
       <Navbar />
       <main>
         <Hero />
-        <About />
-        <Products />
-        <Founder />
-        <Contact />
+        <StarBackground>
+          <About />
+          <Products />
+          <Founder />
+          <Contact />
+          <Footer />
+        </StarBackground>
       </main>
-      <Footer />
     </>
   );
 }
+

@@ -1,7 +1,7 @@
 .founder {
   padding: var(--section-padding);
   position: relative;
-  background: var(--bg-secondary);
+  background: transparent;
 }
 
 .founder::before {
@@ -195,7 +195,12 @@
 
 /* Bio Content */
 .bioContent {
-  padding-top: 8px;
+  padding: 36px 40px;
+  background: rgba(10, 10, 18, 0.45);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .quoteIcon {
